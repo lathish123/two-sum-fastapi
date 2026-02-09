@@ -24,7 +24,7 @@ class TwoSumInput(BaseModel):
 @app.post("/two-sum")
 def two_sum_api(data: TwoSumInput):
     result = two_sum(data.nums, data.target)
-    return {"result": result}
+    return {"indices": result}
 
 # -------- Max Element --------
 class MaxInput(BaseModel):
